@@ -1,0 +1,6 @@
+git clone kostuchgp@githost:java-kursy.git
+git fetch origin
+git merge origin/master
+git remote add origin http://github.com/SupermanSupport/Java-Kursy.git
+git branch nazwa
+git checkout nazwa brancha do ktorego chce isc
