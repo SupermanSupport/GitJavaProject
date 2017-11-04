@@ -1,3 +1,6 @@
-nbproject\rivate\private.properties
-nbproject\private\private.xml
-private.xml
+# Pliki których nie chce mieæ: //<< komentarz 
+test.txt
+test2.txt
+
+# nbproject/private/private.properties
+# nbproject/private/private.xml
