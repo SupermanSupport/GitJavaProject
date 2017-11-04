@@ -19,7 +19,7 @@ public class Main extends JFrame
             this.setTitle("Pasek Menu");
             this.setBounds(300, 300, 900, 500);
             this.setJMenuBar(pasekMenu);
- 
+ // siemano
             
             JMenu menuPlik = pasekMenu.add(new JMenu("Plik"));
             JMenu menuPomoc = pasekMenu.add(new JMenu("Pomoc"));
