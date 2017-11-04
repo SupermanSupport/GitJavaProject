@@ -6,8 +6,10 @@ git branch nazwa
 git checkout nazwa brancha do ktorego chce isc
 
 {
-git rm --cached private.xml
-git add -u.
+git rm --cached private.xml //usuwanie ze sledzenia 
+git add -u .
 }
 
 git commit -m 'Wycofanie zapisu pliku private.xml'
+
+rm nazwapliku // usuwanie pliku na fizycznym dysku
