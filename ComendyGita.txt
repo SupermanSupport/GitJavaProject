@@ -1,61 +1,46 @@
-git clone kostuchgp@githost:java-kursy.git
-git fetch origin
-git merge origin/master
-git remote add origin http://github.com/SupermanSupport/Java-Kursy.git
-git branch nazwa
-git checkout nazwa brancha do ktorego chce isc
+//Podstawowe informacje
+git clone http://github.com/SupermanSupport/Java-Kursy.git  //Pobiera cala zawartosc wybranego repozytorium
+git fetch origin //Pobieranie zmian z servera
+git merge origin/master //Spaja sciagnietego mastera z lokalnymi plikami
+git remote add origin http://github.com/SupermanSupport/Java-Kursy.git //Ustawia konkretny adres zdalnego repozytorium jako główne repozytorium
+git branch nazwa_brancha //Stworzenie brancha
+git checkout [nazwa_brancha] //Zmienia aktywny branch na wybrany przez użytkownika
+
+//Operacje na schowku stash
+
+git stash // tworzy schowek ze zmianami
+git stash list // lista stashy
+git stash branch nazwa //tworzy ze schowka brancha
+git stash apply //zaladuje pierwszy schowek
+git stash apply stash@{2} //zaladuje konkretnego stasha z listy
 
 {
-git rm --cached private.xml //usuwanie ze sledzenia 
-git add -u .
+git rm --cached private.xml //usuwanie ze sledzenia
+git add -u . //??
 }
-
-git commit -m 'Wycofanie zapisu pliku private.xml'
 
 rm nazwapliku // usuwanie pliku na fizycznym dysku
 
-Lista przydatnych komend GIT
+//Lista przydatnych komend GIT
 
-git init
-    Inicjalizuje repozytorium GIT w danym katalogu
-git add [nazwa_pliku]
-    Dodaje zmiany we wskazanym pliku do commita
-git add .
-    Dodaje wszystkie zmienione pliki do commita
-git add -p [nazwa_pliku]
-    Udostępnia możliwość dodania wybranych linii w zmodyfikowanym pliku do commita
-git commit -m "[treść_commita]"
-    Dodaje opis do commita. Dobrym zwyczajem jest opisanie co ta zmiana wprowadza do kodu w zakresie funkcjonalnym
-git add origin [adres_repozytorium, np. https://github.com/username/moje-repozytorium.git]
-    Ustawia konkretny adres zdalnego repozytorium jako główne repozytorium
-git push origin master
-    Wysłanie zmian do branacha zdalnego
-git push -f
-    Wysłanie zmian do zdalnego repozytorium ignorując konflikty, to znaczy, że jeśli wystapią konflikty to pliki zostaną nadpisane właśnie wysłaną wersją. Trzeba stosować to bardzo ostrożnie.
-git checkout [nazwa_brancha]
-    Zmienia aktywny branch na wybrany przez użytkownika
-git checkout [nazwa_pliku]
-    Usuwa zmiany w wybranym pliku
-git checkout .
-    Usuwa zmiany we wszystkich zmienionych plikach
-git checkout -b [nazwa_brancha]
-    Tworzenie nowego brancha z aktywnego brancha i przełączenie się na niego
-git rebase master
-    Zaciągnięcie zmian z brancha głównego do brancha aktywnego
-git push origin :[nazwa_brancha]
-    Usunięcie zdalnego brancha
-git branch -d [nazwa_brancha]
-    Usuwanie brancha lokalnie. Nie można usunąć w ten sposób aktywnego brancha
-git stash
-    Dodanie zmienonych plików do pamięci/stosu i usunięcie ich z aktywnego brancha
-git pull --rebase
-    Pobranie najnowszych zmian z aktywnego brancha zdalnego
-git stash pop
-    Przywrócenie zmodyfikowanych plików z pamięci/stosu
-git stash clear
-    Czyszczenie pamięci/stosu
-git remote prune origin
-    Pobranie aktualizacji o usuniętych branchach zdalnych
+git init 							//Inicjalizuje repozytorium GIT w danym katalogu
+git add [nazwa_pliku] 				//Dodaje zmiany we wskazanym pliku do commita
+git add .							//Dodaje wszystkie zmienione pliki do commita
+git add -p [nazwa_pliku] 			//Udostępnia możliwość dodania wybranych linii w zmodyfikowanym pliku do commita
+git commit -m "[treść_commita]" 	//Dodaje opis do commita. Dobrym zwyczajem jest opisanie co ta zmiana wprowadza do kodu w zakresie funkcjonalnym
+git push origin master 				//Wysłanie zmian do branacha zdalnego
+git push -f 						//Wysłanie zmian do zdalnego repozytorium ignorując konflikty, to znaczy, że jeśli wystapią konflikty to pliki zostaną nadpisane właśnie wysłaną wersją. Trzeba stosować to bardzo ostrożnie.
+git checkout [nazwa_pliku] 			//Usuwa zmiany w wybranym pliku
+git checkout . 						//Usuwa zmiany we wszystkich zmienionych plikach
+git checkout -b [nazwa_brancha]		//Tworzenie nowego brancha z aktywnego brancha i przełączenie się na niego
+git rebase master 					//Zaciągnięcie zmian z brancha głównego do brancha aktywnego
+git push origin :[nazwa_brancha]	//Usunięcie zdalnego brancha
+git branch -d [nazwa_brancha]		//Usuwanie brancha lokalnie. Nie można usunąć w ten sposób aktywnego brancha
+git stash							//Dodanie zmienonych plików do pamięci/stosu i usunięcie ich z aktywnego brancha
+git pull --rebase 					//Pobranie najnowszych zmian z aktywnego brancha zdalnego
+git stash pop 						//Przywrócenie zmodyfikowanych plików z pamięci/stosu
+git stash clear 					//Czyszczenie pamięci/stosu
+git remote prune origin				//Pobranie aktualizacji o usuniętych branchach zdalnych
 git fetch --all
     Pobranie listy zdalnych branchy
 git branch
