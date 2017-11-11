@@ -61,4 +61,10 @@ git reset HEAD^^
 git reset HEAD~2
     Obydwie komendy usuwają ostatnie 2 zmiany z brancha. Im więcej daszków (^) tym więcej commitów zostanie usuniętych.
 git rebase -i HEAD~3
-    Interaktywne zmienianie zawartości, opisów commitów. Commity mozna łączyć wtedy w jeden duży, zmienić jego opis, itd. 
+    Interaktywne zmienianie zawartości, opisów commitów. Commity mozna łączyć wtedy w jeden duży, zmienić jego opis, itd.
+
+
+
+Przydatne linki:
+//Jest to dzielenie ekranów
+https://docs.microsoft.com/pl-pl/sysinternals/downloads/desktops	
